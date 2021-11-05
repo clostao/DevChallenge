@@ -1,4 +1,5 @@
 const networks : { [key: number]: (string | undefined) } = {
+  "-1": "No chain seletected",
   1: "Mainnet",
   3: "Ropsten",
   4: "Rinkeby",
