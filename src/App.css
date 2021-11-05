@@ -1,38 +1,130 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(48, 51, 64);
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  flex: 2;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-description {
+  flex: 2;
+  width: 20%;
+  color: #38f997;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-wallet {
+  flex: 6;
+  width: 60%;
+  text-align: center;
+  color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.App-wallet .App-wallet-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5%;
+  width: 50%;
+  height: 12vh;
+  justify-content: space-evenly;
+  background: rgb(25, 26, 33);
+  border-radius: 5px;
+  border-left: 3px solid #38f997;
+  border-bottom: 3px solid #38f997;
+  border-right: 3px solid #38f997;
+}
+
+.App-contract {
+  flex: 10;
+  width: 60%;
+  text-align: center;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App-contract .App-contract-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5%;
+  width: 50%;
+  height: 20vh;
+  justify-content: space-evenly;
+  background: rgb(25, 26, 33);
+  border-radius: 5px;
+  border-left: 3px solid #38f997;
+  border-bottom: 3px solid #38f997;
+  border-right: 3px solid #38f997;
+}
+
+.App-contract .App-contract-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.App-contract .App-contract-actions button {
+  border-radius: 5px;
+  width: 8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: rgb(0, 230, 118);
+  color: black;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.App-contract-actions button:hover {
+  background: rgba(56, 249, 151, 0.94);
+  color: rgb(0, 0, 0);
+  opacity: 0.8;
+  transition: all 200ms;
+}
+
+.App-contract-value {
+  background: rgb(25, 26, 33);
+  color: #ffffff;
+  width: 30%;
+  flex: 3;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 3vh;
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  border-radius: 5px;
+
+
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.disabled, .disabled:hover {
+  background: #fcc603 !important;
+  opacity: 1 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
   }
 }
